@@ -1,0 +1,43 @@
+.product{
+   width: 90%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 50px auto ;
+   
+}
+.eachProduct{
+    width: 33%;
+    border: 0.5px solid rgb(209, 208, 208);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.imgDiv img{
+    width: 75%;
+    height: 300px;
+    /* object-fit: cover; */
+   border-top-left-radius: 10px;
+}
+.desc{
+    width: 50%;
+}
+.brandName{
+    font-weight: 500;
+    font-size: 18px;
+}
+.prodbutton{
+    border: none;
+    padding: 5%;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.prodbutton:hover{
+    background-color: black;
+    color: white;
+    
+}
