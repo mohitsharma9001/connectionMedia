@@ -3,9 +3,11 @@ import { Routes, Route } from 'react-router-dom'
 import { Product } from './components/product/Product';
 import { Navbar } from './components/navbar/Navbar';
 import { Cart } from './components/cart/Cart';
+
 function App() {
   return (
     <div className="App">
+     
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />}></Route>

@@ -20,6 +20,7 @@ const [count,setCount] = useState(0)
             .then((res) => setProduct(res))
     }
 
+
    const handleClick = ()=>{
     navigate("/cart",localStorage.setItem('product',JSON.stringify(product)))
    }

@@ -1,15 +1,11 @@
 import React from 'react'
-import { useState } from 'react';
+
 import './Cart.css'
 export const Cart = () => {
     const product = JSON.parse(localStorage.getItem("product"));
-    const [data,setData]= useState(product.price)
+    // const [data,setData]= useState(product.price)
     console.log(product)
 
-    const handleClick = ()=>{
-        let data = product.price + product.price+ product.price
-        setData(data)
-    }
   return (
     <div className='mainCartDiv'>
         <div className='cartDiv'>
