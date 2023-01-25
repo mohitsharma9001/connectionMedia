@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import './product.css'
 export const Product = () => {
     const { id } = useParams()
-
+   const navigate= useNavigate()
 const [count,setCount] = useState(0)
     const [product, setProduct] = useState([])
 
-    console.log(product)
+  
 
     useEffect(() => {
         getAllData()
@@ -18,6 +19,11 @@ const [count,setCount] = useState(0)
             .then((res) => res.json())
             .then((res) => setProduct(res))
     }
+
+   const handleClick = ()=>{
+    navigate("/cart",localStorage.setItem('product',JSON.stringify(product)))
+   }
+
     return (
         <div className='productDivMain'>
             <div className='productDiv'>
@@ -35,8 +41,9 @@ const [count,setCount] = useState(0)
                 <h4>Stock : {product.stock}</h4>
                 <p className="rating">⭐⭐⭐⭐{product.rating}</p>
                 <h4>{count}</h4>
-                <button onClick={()=>setCount(count+1)}>Like</button>
-                <button  disabled={count<=0} onClick={()=>setCount(count-1)}>Unlike</button>
+                <button className='addButton' onClick={()=>setCount(count+1)}>Like</button>
+                
+                <button className='addButton' onClick={handleClick}>Add to cart</button>
                 </div>
 
             </div>

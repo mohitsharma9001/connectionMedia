@@ -7,7 +7,7 @@ import './home.css'
 export const Home = () => {
     const [products, setProducts] = useState([])
 
-    console.log(products)
+    // console.log(products)
 
     useEffect(() => {
         getAllData()

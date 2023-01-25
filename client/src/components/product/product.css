@@ -19,3 +19,18 @@
     font-size: 18px;
     font-weight: 500;
 }
+.addButton{
+    border: none;
+    padding: 3%;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.addButton:hover{
+    background-color: black;
+    color: white;
+    
+}
