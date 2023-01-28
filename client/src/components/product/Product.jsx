@@ -8,16 +8,15 @@ export const Product = () => {
 const [count,setCount] = useState(0)
     const [product, setProduct] = useState([])
 
-
-
-    useEffect(() => {
+  useEffect(() => {
         getAllData()
-    }, [])
+    },[])
 
     const getAllData = () => {
         fetch(`https://dummyjson.com/products/${id}`)
             .then((res) => res.json())
             .then((res) => setProduct(res))
+            .catch(()=>console.log("error"))
     }
 
 
