@@ -3,7 +3,7 @@ import React from 'react'
 import './Cart.css'
 export const Cart = () => {
     const product = JSON.parse(localStorage.getItem("product"));
-    // const [data,setData]= useState(product.price)
+  
     console.log(product)
 
   return (

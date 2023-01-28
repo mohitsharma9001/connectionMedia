@@ -8,7 +8,7 @@ export const Product = () => {
 const [count,setCount] = useState(0)
     const [product, setProduct] = useState([])
 
-  
+
 
     useEffect(() => {
         getAllData()
